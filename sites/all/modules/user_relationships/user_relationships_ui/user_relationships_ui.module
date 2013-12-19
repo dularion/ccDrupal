@@ -212,8 +212,8 @@ function user_relationships_ui_init() {
   }
   drupal_add_js(USER_RELATIONSHIPS_UI_PATH . '/user_relationships_ui.js');
   drupal_add_css(USER_RELATIONSHIPS_UI_PATH . '/user_relationships_ui.css');
-  $settings['user_relationships_ui']['loadingimage'] = url(USER_RELATIONSHIPS_UI_PATH . '/images/loadingAnimation.gif');
-  $settings['user_relationships_ui']['savingimage'] = url(USER_RELATIONSHIPS_UI_PATH . '/images/savingimage.gif');
+  $settings['user_relationships_ui']['loadingimage'] = file_create_url(USER_RELATIONSHIPS_UI_PATH . '/images/loadingAnimation.gif');
+  $settings['user_relationships_ui']['savingimage'] = file_create_url(USER_RELATIONSHIPS_UI_PATH . '/images/savingimage.gif');
   $settings['user_relationships_ui']['position'] = array(
     'position' => variable_get('user_relationships_position', 'absolute'),
     'left' => variable_get('user_relationships_left', '0'),
@@ -695,5 +695,14 @@ function user_relationships_ui_user_relationships_type_update($relationship_type
       'hide' => isset($relationship_type->ui_settings_hide) ? (int) $relationship_type->ui_settings_hide : 0,
       'show_tab' => isset($relationship_type->ui_settings_show_tab) ? (int) $relationship_type->ui_settings_show_tab : 0,
     ))
+    ->execute();
+}
+
+/**
+ * Implements hook_user_relationships_type_delete().
+ */
+function user_relationships_ui_user_relationships_type_delete($rtype) {
+  db_delete('user_relationships_ui_settings')
+    ->condition('rtid', $rtype->rtid)
     ->execute();
 }

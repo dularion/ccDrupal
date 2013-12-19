@@ -38,6 +38,14 @@ function user_relationship_views_views_data() {
         'weight' => 0,
       ),
     ),
+    'rid' => array(
+      'title' => t('RID'),
+      'help' => t('Relationship ID of the relationship'),
+      'field' => array(
+        'handler' => 'views_handler_field_numeric',
+        'click sortable' => TRUE,
+      ),
+    ),
     'rtid' => array(
       'title' => t('RTID'),
       'help' => t('Type ID of the relationship'),

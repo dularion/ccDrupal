@@ -68,7 +68,7 @@ function user_relationships_preprocess_author_pane(&$variables) {
       if (!user_relationships_can_request($user, $rtype) || !user_relationships_can_receive($account, $rtype)) {
         continue;
       }
-      $css_class = array(str_replace(' ', '-', $rtype->name), 'author-pane-link', 'user_relationships_popup_link', 'author-relationship-remove-icon');
+      $css_class = array(str_replace(' ', '-', $rtype->name), 'author-pane-link', 'user_relationships_popup_link', 'author-relationship-add-icon');
       //add link
       if (!isset($variables['user_relationships'])) {
         $variables['user_relationships'] = '';

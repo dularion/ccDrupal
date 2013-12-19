@@ -588,7 +588,7 @@ class UserRelationshipsI18nTestCase extends DrupalWebTestCase {
    */
   function testTypeTranslation() {
 
-    $admin = $this->drupalCreateUser(array('administer languages', 'access administration pages', 'administer user relationships', 'translate interface'));
+    $admin = $this->drupalCreateUser(array('administer languages', 'access administration pages', 'administer user relationships', 'translate interface', 'translate user-defined strings'));
     $this->drupalLogin($admin);
 
     $this->addLanguage('de');
