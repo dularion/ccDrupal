@@ -1,0 +1,8 @@
+name = PayPal MassPay Affiliates Integration
+description = Add support for paying Affiliates using PayPal MassPay
+version = "7.x-4.7"
+core = 7.x
+package = MoneyScripts
+dependencies[] = ms_affiliates
+dependencies[] = ms_paypal_wpp
+configure = admin/moneyscripts/ms_affiliate_masspay

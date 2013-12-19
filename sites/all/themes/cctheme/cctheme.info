@@ -1,0 +1,54 @@
+name = CC theme
+description = This is a sub-theme of theme Bartik, made by John for the web site example.com (red, responsive).
+core = 7.x
+base theme = tb_sirate
+
+
+; Stylesheets
+stylesheets[all][] = 'css/select2.css'
+stylesheets[all][] = 'fonts/font-awesome.css'
+; stylesheets[all][] = 'css/bootstrap.min.css'
+stylesheets[all][] = 'css/custom.css'
+stylesheets-conditional[lte IE 9][all][] = 'css/ie9.css'
+stylesheets-conditional[lt IE 9][all][] = ie8.css
+
+
+; Scripts
+scripts[] = 'js/jquery-1.10.2.min.js'
+scripts[] = 'js/select2.min.js'
+scripts[] = 'js/custom.js'
+
+
+
+; Core regions
+regions[content] = 'Main content'
+regions[header] = 'Header'
+regions[menu_bar] = 'Menu bar'
+regions[slideshow] = 'Slideshow'
+regions[highlighted] = 'Highlighted'
+regions[footer] = 'Footer'
+regions[help] = 'Help'
+regions[page_top] = 'Page top'
+regions[page_bottom] = 'Page bottom'
+regions[mass_bottom] = 'Mass bottom'
+regions[area_top] = 'Area Top'
+
+
+; Sidebar regions
+regions[sidebar_first] = 'Sidebar first'
+
+; panel regions
+regions[panel_first_1] = 'Panel first column 1'
+regions[panel_first_2] = 'Panel first column 2'
+regions[panel_first_3] = 'Panel first column 3'
+
+regions[panel_second_1] = 'Panel second column 1'
+
+regions[panel_third_1] = 'Panel third column 1'
+regions[panel_third_2] = 'Panel third column 2'
+regions[panel_third_3] = 'Panel third column 3'
+regions[panel_third_4] = 'Panel third column 4'
+
+regions[panel_fourth_1] = 'Panel fourth column 1'
+regions[panel_fourth_2] = 'Panel fourth column 2'
+regions[panel_fourth_3] = 'Panel fourth column 3'

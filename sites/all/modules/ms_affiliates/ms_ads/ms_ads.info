@@ -1,0 +1,8 @@
+name = Affiliate Ads
+description = Serve Affiliate Ads
+version = "7.x-4.7"
+core = 7.x
+package = MoneyScripts
+dependencies[] = ms_core
+dependencies[] = ms_affiliates
+configure = admin/moneyscripts/ms_ads

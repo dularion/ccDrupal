@@ -1,0 +1,269 @@
+@import "mixins";
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:700,300);
+@import "../font/font-awesome.css";
+@import "button";
+@import "slider";
+@import "calltoaction";
+@import "coaches";
+@import "breadcrumbs";
+@import "topLogin";
+@import "language-switcher";
+@import "footer";
+@import "tbmenu";
+@import "panelFirstWrapper";
+@import "coachVideos";
+@import "strategy";
+@import "blogs";
+
+
+
+html{
+  height: 100%;
+}
+
+body{
+  @include gradient-radial(#3e5379, #0c121c);
+  font-family: 'Roboto Condensed', sans-serif;
+  &:before{
+    content: '';
+    @include gradient-radial(#3e5379, #0c121c);
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -2;
+  }
+  &:after{
+    content: '';
+    background: url('../img/grain.png');
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+  }
+}
+
+div.fivestar-widget .cancel, div.fivestar-widget .star{
+  height: 16px;
+}
+
+div.fivestar-widget .star, div.fivestar-widget .star a{
+  background: url(../img/star.png) no-repeat 0 0;
+}
+
+div.fivestar-widget-static .star span.on{
+  background: url(../img/star.png) no-repeat 0 -32px;
+}
+
+div.fivestar-widget-static .star span.off{
+  background: url(../img/star.png) no-repeat 0 0;
+}
+
+#header-wrapper{
+  @include gradient-radial(rgba(237, 242, 255, 0.6), rgba(237, 242, 255, 0.2));
+  background-image: -webkit-radial-gradient(25% 50%, circle,  rgba(237, 242, 255, 0.6) 0%, rgba(237, 242, 255, 0.2) 100%);
+  background-color: transparent;
+
+  #header{
+    padding-top: 20px;
+    #logo{
+      margin-left: -17px;
+    }
+  }
+
+  #secondary-menu-links{
+    position: relative;
+    top: -20px;
+    li{
+      background: rgba(255, 255, 255, 0.2);
+      padding: 10px 9px 2px;
+      text-transform: uppercase;
+      font-family: 'Roboto Condensed', sans-serif;
+      a{
+        color: white;
+        font-size: .95em;
+      }
+    }
+  }
+}
+
+
+h1,h2,h3,h4,h5{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.wrapper .container{
+  background: transparent;
+}
+
+#page-title{
+  background: transparent;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+  border: none;
+  box-shadow: none;
+  margin: 0;
+  span{
+    background: none;
+    padding-left: 0;
+  }
+}
+
+
+
+
+#main-wrapper{
+  .block-inner{
+    @extend .white-border-box;
+  }
+
+  ul.tabs li {
+    &.active{
+      border-radius: 0;
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      a{color: white;}
+
+    }
+    a {
+      text-shadow: none;
+      color: rgba(255, 255, 255, 0.4);
+
+    }
+  }
+}
+
+#main-content {
+  .block-inner{
+    @extend .white-border-box;
+
+    >.block-content >.article{
+      border-bottom: 1px solid #ECECEC;
+      margin-bottom: 2em;
+
+      .node-readmore{
+        float: right;
+      }
+    }
+  }
+}
+
+.not-front{
+  #main-content {
+    .grid-inner {
+      margin-left: 0;
+    }
+  }
+}
+
+#footer-wrapper > .container{
+  background: rgba(10, 10, 10, 0.45);
+}
+
+#lang-dropdown-form {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.hcsb_container hcsb_ac{
+  height: auto;
+  overflow: visible;
+}
+
+
+
+
+
+.at-vertical-menu{
+  @include box-shadow(1px 1px 1px rgba(0, 0, 0, 0.15));
+}
+
+
+
+
+
+.one-sidebar.sidebar-first {
+  #main-wrapper .container-inner>.group-12{
+
+    .grid-8{
+      width: 710px;
+    }
+    >.grid-4#sidebar-first-wrapper{
+      width: 260px;
+      .grid-inner{
+        padding: 0;
+      }
+    }
+  }
+}
+
+
+#main-content>.grid-inner{
+  margin-left: 0;
+}
+
+
+
+.node-readmore a,
+.article ul.links li.node-readmore a{
+  background: #F3F3F3;
+  padding: 10px 12px;
+  color: #666;
+  font-size: 12px;
+  border-radius: 0;
+  margin: 0;
+  &:hover{
+    background: rgb(219, 219, 219);
+    color: #666;
+  }
+}
+
+#main-wrapper .taf-widget.block{
+  .block-inner{
+    @include gradient-radial(#4c97c8, #247fbc);
+    border:none;
+  }
+  .block-title{display: none;}
+  .call-to-action-btn{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 47%;
+    border-bottom: 3px solid rgb(155, 12, 12);
+    border-right: 3px solid rgb(155, 12, 12);
+  }
+  .taf-img{
+    background: url("../img/taf.png");
+    width: 209px;
+    height: 133px;
+    position: relative;
+    z-index: 2;
+    margin-top: 55px;
+    margin-bottom: -11px;
+  }
+}
+
+
+.article{
+  &.node-coach-video{
+    .submitted{
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+@import "media";
+
+
+
+

@@ -1,0 +1,16 @@
+name = Affiliates Suite
+description = Integrate an Affiliates System with MoneyScripts Modules
+package = MoneyScripts
+dependencies[] = ms_core
+version = "7.x-4.7"
+core = 7.x
+project = "ms_affiliates"
+project status url = http://www.moneyscripts.net/ms_project_status
+files[] = includes/ms_paypal_wps_class.php
+files[] = views/ms_affiliates_address_handler.inc
+files[] = views/ms_affiliates_balance_handler.inc
+files[] = views/ms_affiliates_paypal_handler.inc
+files[] = views/ms_affiliates_referrer_handler.inc
+configure = admin/moneyscripts/ms_affiliates
+l10n server = moneyscripts.net
+l10n url = https://www.moneyscripts.net/sites/default/filesnew/l10n_packager/l10n_server.xml
